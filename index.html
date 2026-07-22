@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <title>Rock Paper Scissors</title>
-    </head>
-    <body>
-        <h1>ROCK PAPER SCISSORS</h1>
-        <hr>
-        <div id="vsContainer">
 
-            <img src="" alt="" id="yourImg">
-            <img src="" alt="" id="vsImg">
-            <img src="" alt="" id="compImg">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <h3>ROCK PAPER SCISSORS</h3>
+    <!--vsContainer-->
+    <div id="vsContainer">
+        <div class="player">
+            <p id="youText">YOU</p>
+            <img src="images/rock.png" alt="Rock" id="youImg" class="vsCont">
         </div>
+
+        <div class="vs">
+            <img src="images/versus.png" alt="VS" id="vsImg" class="vsCont">
+            <div id="resultContainer">
+                <p id="result">Result</p>
+            </div>
+        </div>
+
+        <div class="player">
+            <p id="computerText">COMPUTER</p>
+            <img src="images/paper.png" alt="Paper" id="compImg" class="vsCont">
+        </div>
+
+    </div>
+    <div id="bottomContainer">
+
+        <!--ScoreContainer-->
+
+
         <div id="scoreContainer">
+            <p id="scoreText">SCOREBOARD</p>
+
         </div>
-        <div id="scoreContainer"></div>
-        <div id="moveContainer"></div>
-        <img src="images/rock.png" alt="rock" id="yourImg">
-        <img src="images/paper.png" alt="paper" id="vsImg">
-        <img src="images/scissors.png" alt="scissors" id="compImg">
-        <div id="historyContainer"></div>
-        <button type="reset">RESET GAME</button>
-        <script src="script.js"></script>
-    </body>
+
+        <!--moveContainer-->
+
+        <div id="moveContainer">
+            <p>CHOOSE YOUR MOVE</p>
+            <div id="moveImg"><img src="images/rock.png" alt="rock" id="rockChoice" class="moveCont">
+                <img src="images/paper.png" alt="paper" id="paperChoice" class="moveCont">
+            <img src="images/scissors.png" alt="scissors" id="scissorsChoice" class="moveCont">
+            </div>
+        </div>
+
+
+        <!--historyContainer-->
+        <div id="historyContainer">
+
+            <p id="historyText">HISTORY</p>
+        </div>
+    </div>
+
+    <button type="reset" id="resetBtn">⟳ RESET GAME</button>
+    <script src="script.js"></script>
+</body>
+
 </html>
