@@ -1,0 +1,27 @@
+body{
+    background: #060B1A;
+}
+h1{
+   font-size: 4rem;
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #4FC3F7,
+        #C95CFF,
+        #FFD166
+    ); /*This gives the backgroun color not text color*/
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    /*We clip the background to only where the letters exist*/
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /*Now we make the color transparent but since we clipped the bg we will se the 
+    text coloured like bg*/
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
