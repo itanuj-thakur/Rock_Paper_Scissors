@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" href="style.css">
+    
     <title>Rock Paper Scissors</title>
 </head>
 
@@ -19,7 +20,7 @@
         <div class="vs">
             <img src="images/versus.png" alt="VS" id="vsImg" class="vsCont">
             <div id="resultContainer">
-                <p id="result">Result</p>
+                <p id="result">RESULT</p>
             </div>
         </div>
 
@@ -35,8 +36,21 @@
 
 
         <div id="scoreContainer">
-            <p id="scoreText">SCOREBOARD</p>
+            <p>SCORECARD</p>
+            <div class="scoreRow">
+                <span>YOU</span>
+                <span id="yourScore">0</span>
+            </div>
 
+            <div class="scoreRow">
+                <span>COMPUTER</span>
+                <span id="computerScore">0</span>
+            </div>
+
+            <div class="scoreRow">
+                <span>DRAW</span>
+                <span id="drawScore">0</span>
+            </div>
         </div>
 
         <!--moveContainer-->
@@ -45,7 +59,7 @@
             <p>CHOOSE YOUR MOVE</p>
             <div id="moveImg"><img src="images/rock.png" alt="rock" id="rockChoice" class="moveCont">
                 <img src="images/paper.png" alt="paper" id="paperChoice" class="moveCont">
-            <img src="images/scissors.png" alt="scissors" id="scissorsChoice" class="moveCont">
+                <img src="images/scissors.png" alt="scissors" id="scissorsChoice" class="moveCont">
             </div>
         </div>
 
@@ -54,6 +68,9 @@
         <div id="historyContainer">
 
             <p id="historyText">HISTORY</p>
+            <div id="history">
+
+            </div>
         </div>
     </div>
 
