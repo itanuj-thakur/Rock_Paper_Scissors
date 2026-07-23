@@ -290,3 +290,75 @@ h3 {
         opacity: 1;
     }
 }
+
+/* Responsive breakpoints */
+@media (max-width: 700px) {
+    body {
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    #vsContainer {
+        flex-direction: column;
+        height: auto;
+        min-width: 90%;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .vsCont {
+        width: 130px;
+        height: 130px;
+    }
+
+    #vsImg {
+        width: 180px;
+        margin-bottom: 0;
+    }
+
+    #bottomContainer {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    #scoreContainer,
+    #moveContainer,
+    #historyContainer {
+        max-height: none;
+    }
+
+    .moveCont {
+        height: 80px;
+        width: 80px;
+    }
+
+    #moveImg {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .vsCont {
+        width: 100px;
+        height: 100px;
+    }
+
+    #vsImg {
+        width: 150px;
+    }
+
+    .moveCont {
+        height: 65px;
+        width: 65px;
+    }
+
+    #resultContainer {
+        width: 120px;
+        font-size: 1.2rem;
+    }
+}

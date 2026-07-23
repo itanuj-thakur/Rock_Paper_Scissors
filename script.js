@@ -72,7 +72,6 @@ function play() {
         break;
     }
   }
-  resultText.classList.remove("WIN", "LOSE", "DRAW");
   animateResult();
   animateComputerChoice(() => {
     computerImg.src = `images/${computerChoice}.png`;
@@ -149,19 +148,20 @@ function animateComputerChoice(callback) {
   }, 100);
   setTimeout(() => {
     clearInterval(interval);
-    clearInterval(resultinterval);
+    if (stopResultAnimation) stopResultAnimation();
     shuffleSound.pause();
     shuffleSound.currentTime=0;
     callback();
 
   }, 1000);
 }
-let resultinterval=null;
+let stopResultAnimation = null;
 function animateResult() {
   let dot = "";
-  resultinterval = setInterval(() => {
+  const interval = setInterval(() => {
     dot += ".";
     if (dot.length > 4) dot = "";
     resultText.textContent = "FIGHT" + dot;
   }, 200);
+  stopResultAnimation = () => clearInterval(interval);
 }
